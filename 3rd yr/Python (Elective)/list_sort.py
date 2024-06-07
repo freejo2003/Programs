@@ -1,0 +1,5 @@
+name=input("Enter the names separated with ',':")
+names=name.split(sep=",")
+print("Before sorting:",names)
+names.sort()
+print("After Sorting:",names)
