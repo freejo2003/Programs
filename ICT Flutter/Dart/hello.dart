@@ -10,9 +10,9 @@ void main() {
   print(s);
   print(s1);
   print(num1 + num2);
-  print(
-      "$s $num1"); //$ takes the value from the variable(Dart String interpolation)
+  print("$s $num1"); //$ takes the value from the variable(Dart String interpolation)
   print("$s $s1");
+  
 //LIST
   print("---------LIST--------");
   List<int> numberList = [10, 11, 12, 13];

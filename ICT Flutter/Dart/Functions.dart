@@ -1,6 +1,6 @@
 void main() {
   print("Sum of 5 and 3");
-  int result = Sum(5, 3);
+  int result = sum(5, 3);
   print(result);
   print("Is 5 even?");
   bool res = even(5);
@@ -10,7 +10,7 @@ void main() {
     print("No");
   }
 }
-int Sum(int number1, int number2) {//function with parameter
+int sum(int number1, int number2) {//function with parameter
   return number1 + number2;
 }
 
