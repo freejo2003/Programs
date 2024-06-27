@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,20 +8,21 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.teal.shade800,
-        //leading: Icon(Icons.arrow_back),
-        title: Text("WhatsApp",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-                fontWeight: FontWeight.w600)),
-        actions: [
-          Icon(Icons.search, color: Colors.white, size: 30),
-          Icon(Icons.more_vert, color: Colors.white, size: 30),
-        ],
-      ),
-      body:
+        appBar: AppBar(
+          backgroundColor: Colors.teal.shade800,
+          leading: Icon(Icons.arrow_back),
+          title: Text("WhatsApp",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w600)),
+          actions: [
+            Icon(Icons.search, color: Colors.white, size: 30),
+            Icon(Icons.more_vert, color: Colors.white, size: 30),
+          ],
+        ),
+        body:
+      
        ListView(
         children: [
           ListTile(
@@ -153,7 +156,6 @@ class HomeScreen extends StatelessWidget {
             ]),
           ),
         ],
-      ),
-    );
+      ),  );
   }
 }
