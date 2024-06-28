@@ -8,22 +8,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.teal.shade800,
-          leading: Icon(Icons.arrow_back),
-          title: Text("WhatsApp",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w600)),
-          actions: [
-            Icon(Icons.search, color: Colors.white, size: 30),
-            Icon(Icons.more_vert, color: Colors.white, size: 30),
-          ],
-        ),
-        body:
-      
-       ListView(
+      appBar: AppBar(
+        backgroundColor: Colors.teal.shade800,
+        title: Text("WhatsApp",
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.w600)),
+        actions: [
+          Icon(Icons.search, color: Colors.white, size: 30),
+          Icon(Icons.more_vert, color: Colors.white, size: 30),
+        ],
+      ),
+      body: ListView(
         children: [
           ListTile(
             leading: Icon(Icons.person, size: 43),
@@ -156,6 +153,7 @@ class HomeScreen extends StatelessWidget {
             ]),
           ),
         ],
-      ),  );
+      ),
+    );
   }
 }
