@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:sample_project/functions.dart';
 import 'package:sample_project/home_screen.dart';
@@ -18,7 +17,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
   void _toggleVisibility() {
-    
     setState(() {
       _obscureText = !_obscureText;
     });
