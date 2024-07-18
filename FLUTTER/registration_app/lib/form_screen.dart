@@ -89,7 +89,7 @@ class _FormSreenState extends State<FormSreen> {
                     items: courses
                         .map((course) => DropdownMenuItem<String>(
                               value:
-                                  course == '<Select a course>' ? null : course,
+                                  course == 'Select a course' ? null : course,
                               child: Text(course),
                             ))
                         .toList(),
@@ -101,7 +101,7 @@ class _FormSreenState extends State<FormSreen> {
                     validator: (value) {
                       if (value == null ||
                           value.isEmpty ||
-                          value == '<Select a course>') {
+                          value == 'Select a course') {
                         return 'Please select a course';
                       }
                       return null;
@@ -222,7 +222,7 @@ class _FormSreenState extends State<FormSreen> {
                       border: OutlineInputBorder(),
                     ),
                     value: selectedGender,
-                    items: ['<Select Gender>', 'Male', 'Female', 'Other']
+                    items: ['Select Gender', 'Male', 'Female', 'Other']
                         .map((gender) => DropdownMenuItem<String>(
                               value:
                                   gender == '<Select Gender>' ? null : gender,

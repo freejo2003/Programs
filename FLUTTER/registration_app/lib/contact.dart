@@ -1,9 +1,22 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Contact extends StatelessWidget {
   const Contact({super.key});
+
+  void _launchEmail(String email) async {
+    final Uri params = Uri(
+      scheme: 'mailto',
+      path: email,
+    );
+    if (await canLaunchUrl(params)) {
+      await launchUrl(params);
+    } else {
+      throw 'Could not launch $params';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -163,21 +176,98 @@ class Contact extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 30),
-                        Row(
+                        Column(
                           children: [
-                            SizedBox(width: 10.0),
-                            Expanded(
-                              child: Text(
-                                "It was a great opportunity to work together. Thank you ICT Kerala for the great opportunity. We look forward to working together in the future.",
-                                style: TextStyle(
-                                  color: Colors.blue,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                            Row(
+                              children: [
+                                SizedBox(width: 10.0),
+                                Expanded(
+                                  child: Text(
+                                    "It was a great opportunity to work together. Thank you ICT Kerala for the great opportunity. We look forward to working together in the future.",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    softWrap: true,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 5,
+                                  ),
                                 ),
-                                softWrap: true,
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 5,
-                              ),
+                              ],
+                            ),
+                            SizedBox(height: 30),
+                            Row(
+                              children: [
+                                SizedBox(width: 10.0),
+                                Icon(Icons.mail, color: Colors.black),
+                                GestureDetector(
+                                  onTap: () => _launchEmail("agetosunny1@gmail.com"),
+                                  child: Text(
+                                    "agetosunny1@gmail.com",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(width: 10.0),
+                                Icon(Icons.mail, color: Colors.black),
+                                GestureDetector(
+                                  onTap: () => _launchEmail("hareesh0q@gmail.com"),
+                                  child: Text(
+                                    "hareesh0q@gmail.com",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(width: 10.0),
+                                Icon(Icons.mail, color: Colors.black),
+                                GestureDetector(
+                                  onTap: () => _launchEmail("freejojaisonk@gmail.com"),
+                                  child: Text(
+                                    "freejojaisonk@gmail.com",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(width: 10.0),
+                                Icon(Icons.mail, color: Colors.black),
+                                GestureDetector(
+                                  onTap: () => _launchEmail("satchidanand@gmail.com"),
+                                  child: Text(
+                                    "satchidanand@gmail.com",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),

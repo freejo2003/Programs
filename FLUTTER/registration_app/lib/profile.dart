@@ -129,7 +129,12 @@ class _ProfileState extends State<Profile> {
                     children: [
                       IconButton(
                         icon: const Icon(Icons.logout_rounded, size: 40.0),
-                        onPressed: () {
+                        onPressed: () async {
+                          SharedPreferences prefs = await SharedPreferences.getInstance();
+                          bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+                          if (isLoggedIn) {
+                            await prefs.setBool('isLoggedIn', false);
+                          }
                           Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
