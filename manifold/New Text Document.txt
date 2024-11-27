@@ -1,6 +1,19 @@
+
+
+LINKS:
+https://www.hackerrank.com/manifold-1x2y3z
+
+https://www.hackerrank.com/manifold-7h9k0d/
+
+https://www.hackerrank.com/manifold-8b9x7s/
+
+
+
+
+
 Study list of in built functions
 use of slicing
-start,stop,step
+start, stop, step
 time is a shit in programming (float and numbers)
 
 L=[10,20,30,40,50,60,70,80,90]
@@ -176,5 +189,3 @@ for i in range(2,len(elist),2):
     if round(diff,2)>float(dur):
         print(f"{b:.2f}")
         break
-
-CONTESTS:manifold-1a9l8w

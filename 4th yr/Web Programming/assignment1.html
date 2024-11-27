@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobsite Registration Form</title>
+</head>
+<body>
+    <h1>Jobsite Registration Form</h1>
+    <form action="submit-form" method="post">
+        <!-- Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <br><br>
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <!-- Contact Number -->
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+        <br><br>
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+        <!-- Gender -->
+        <label>Gender:</label>
+        <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+        </div>
+        <br><br>
+        <!-- Area of Interest -->
+        <label>Area of Interest:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="development" name="interest" value="development">
+            <label for="development">Development</label>
+
+            <input type="checkbox" id="design" name="interest" value="design">
+            <label for="design">Design</label>
+
+            <input type="checkbox" id="marketing" name="interest" value="marketing">
+            <label for="marketing">Marketing</label>
+
+            <input type="checkbox" id="data" name="interest" value="data">
+            <label for="data">Data Science</label>
+        </div>
+        <br><br>
+        <!-- Experience -->
+        <label for="experience">Experience:</label>
+        <select id="experience" name="experience" required>
+            <option value="">Select experience level</option>
+            <option value="0-1">0-1 years</option>
+            <option value="2-3">2-3 years</option>
+            <option value="4-5">4-5 years</option>
+            <option value="6+">6+ years</option>
+        </select>
+        <br><br>
+        <!-- Buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
